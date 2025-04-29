@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summafy Architecture - Technical Deep Dive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <nav class="mb-8 flex justify-between items-center">
+            <a href="../../summafy.html" class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-arrow-left"></i> Back to Project Overview
+            </a>
+            <div class="text-sm text-gray-600">
+                Published: April 29, 2025
+            </div>
+        </nav>
+        
+        <article>
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold mb-4">Summafy Architecture: A Technical Deep Dive</h1>
+                <p class="text-xl text-gray-600">Exploring the cloud-native architecture and technical implementation of our AI-powered document processing platform</p>
+            </header>
+
+            <div class="prose max-w-none">
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Architecture Overview</h2>
+                    <div class="bg-white p-6 rounded-lg shadow mb-8">
+                        <div class="mb-6">
+                            <img src="../../assets/images/summafy-architecture-overview.png" alt="High-level System Architecture" class="w-full rounded-lg shadow-sm mb-4">
+                            <p class="text-sm text-gray-600 italic">High-level system architecture showing main components and their interactions</p>
+                        </div>
+                        <p class="text-gray-700">
+                            Summafy employs a modern cloud-native architecture that leverages serverless components and microservices. This approach enables us to build a scalable, maintainable, and cost-effective platform that can handle varying workloads efficiently.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-bold mb-4">Detailed Architecture</h3>
+                        <div class="mb-6">
+                            <img src="../../assets/images/summafy-architecture-detailed.png" alt="Detailed System Architecture" class="w-full rounded-lg shadow-sm mb-4">
+                            <p class="text-sm text-gray-600 italic">Detailed architecture showing frontend, backend services, and cloud infrastructure components</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Key Components</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Frontend Application</h3>
+                            <p class="text-gray-700 mb-4">
+                                Our frontend is built using Vue.js, providing a responsive and intuitive user interface. Key features include:
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Single-page application architecture</li>
+                                <li>Vuex for state management</li>
+                                <li>Vue Router with protected routes</li>
+                                <li>Real-time processing status updates</li>
+                                <li>WebSocket integration for live feedback</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Backend Services</h3>
+                            <p class="text-gray-700 mb-4">
+                                The backend is powered by a Go-based REST API that handles core business logic and request routing:
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>High-performance request handling</li>
+                                <li>JWT-based authentication system</li>
+                                <li>Rate limiting and security middleware</li>
+                                <li>Structured logging and monitoring</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Cloud Infrastructure</h3>
+                            <p class="text-gray-700 mb-4">
+                                Our cloud infrastructure is built on AWS, utilizing serverless components for optimal scaling and cost efficiency:
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>AWS Lambda for document processing</li>
+                                <li>Step Functions for workflow orchestration</li>
+                                <li>S3 for secure document storage</li>
+                                <li>Infrastructure as Code with Terraform</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summafy - Technical Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <nav class="mb-8 flex justify-between items-center">
+            <div class="space-x-4">
+                <a href="../../summafy.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-arrow-left"></i> Project
+                </a>
+                <a href="./index.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-newspaper"></i> Blog
+                </a>
+            </div>
+            <div class="text-sm text-gray-600">
+                Published: April 29, 2025
+            </div>
+        </nav>
+        
+        <article>
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold mb-4">Technical Overview</h1>
+                <p class="text-xl text-gray-600">A comprehensive look at Summafy's architecture and implementation</p>
+            </header>
+
+            <div class="prose max-w-none">
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">System Architecture</h2>
+                    <div class="bg-white p-6 rounded-lg shadow mb-8">
+                        <div class="mb-6">
+                            <img src="../../assets/images/summafy-architecture-overview.png" alt="High-level System Architecture" class="w-full rounded-lg shadow-sm mb-4">
+                            <p class="text-sm text-gray-600 italic">High-level system architecture diagram</p>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-gray-700">
+                                Summafy is built on a modern, cloud-native architecture that combines the best of serverless computing, microservices, and AI technologies. The system is designed to be scalable, maintainable, and cost-effective while delivering high performance and reliability.
+                            </p>
+                            <div class="pl-4">
+                                <h3 class="font-bold mb-2">Key Architectural Decisions</h3>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Serverless-first approach for optimal scaling and cost efficiency</li>
+                                    <li>Event-driven architecture for loose coupling</li>
+                                    <li>Microservices pattern for maintainability</li>
+                                    <li>RAG implementation for enhanced AI capabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Core Components</h2>
+                    <div class="grid gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Frontend Layer</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Vue.js SPA with Vuex state management</li>
+                                <li>Real-time updates via WebSocket</li>
+                                <li>Responsive design with Tailwind CSS</li>
+                                <li>Client-side caching and optimization</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Backend Services</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Go-based REST API for core business logic</li>
+                                <li>AWS Lambda functions for document processing</li>
+                                <li>Step Functions for workflow orchestration</li>
+                                <li>S3 for document storage</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">AI & Processing</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>RAG-enhanced summarization pipeline</li>
+                                <li>Vector embeddings for semantic search</li>
+                                <li>Context-aware processing</li>
+                                <li>Multi-format document support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Development & Operations</h2>
+                    <div class="grid gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Development Practices</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Infrastructure as Code with Terraform</li>
+                                <li>CI/CD pipeline with GitHub Actions</li>
+                                <li>Automated testing at all levels</li>
+                                <li>Code quality and security scanning</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Operational Excellence</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Comprehensive monitoring with CloudWatch</li>
+                                <li>Automated scaling policies</li>
+                                <li>Disaster recovery procedures</li>
+                                <li>Security best practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Further Reading</h2>
+                    <div class="grid gap-4">
+                        <a href="fullstack.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">Full Stack Implementation →</h3>
+                            <p class="text-gray-600">Details of our Vue.js frontend and Go backend implementation</p>
+                        </a>
+                        <a href="serverless.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">Serverless Architecture →</h3>
+                            <p class="text-gray-600">Deep dive into our AWS Lambda-based architecture</p>
+                        </a>
+                        <a href="rag.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">RAG Implementation →</h3>
+                            <p class="text-gray-600">How we use RAG for enhanced document summarization</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

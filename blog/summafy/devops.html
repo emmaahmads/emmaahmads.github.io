@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summafy - DevOps Practices</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <nav class="mb-8 flex justify-between items-center">
+            <div class="space-x-4">
+                <a href="../../summafy.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-arrow-left"></i> Project
+                </a>
+                <a href="./index.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-newspaper"></i> Blog
+                </a>
+            </div>
+            <div class="text-sm text-gray-600">
+                Published: April 29, 2025
+            </div>
+        </nav>
+        
+        <article>
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold mb-4">DevOps Practices</h1>
+                <p class="text-xl text-gray-600">How we implement CI/CD, monitoring, and operational excellence in Summafy</p>
+            </header>
+
+            <div class="prose max-w-none">
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">CI/CD Pipeline</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Continuous Integration</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Our CI pipeline ensures code quality and reliability:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Automated testing (unit, integration, e2e)</li>
+                                        <li>Code quality checks (linting, formatting)</li>
+                                        <li>Security scanning</li>
+                                        <li>Build verification</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Continuous Deployment</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Automated deployment process across environments:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Environment-specific configurations</li>
+                                        <li>Blue-green deployments</li>
+                                        <li>Rollback capabilities</li>
+                                        <li>Deployment verification</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Pipeline Automation</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Using GitHub Actions for workflow automation:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Automated PR reviews</li>
+                                        <li>Infrastructure validation</li>
+                                        <li>Dependency updates</li>
+                                        <li>Release management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Monitoring and Observability</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Application Monitoring</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Comprehensive monitoring setup using:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>CloudWatch metrics and logs</li>
+                                        <li>X-Ray distributed tracing</li>
+                                        <li>Custom dashboards</li>
+                                        <li>Performance metrics</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Alerting System</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Proactive issue detection and notification:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Error rate monitoring</li>
+                                        <li>Performance thresholds</li>
+                                        <li>Cost anomaly detection</li>
+                                        <li>Security alerts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Operational Excellence</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Incident Management</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Structured approach to handling incidents:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Incident response procedures</li>
+                                        <li>On-call rotations</li>
+                                        <li>Post-mortem analysis</li>
+                                        <li>Continuous improvement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Documentation</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Maintaining comprehensive documentation:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Architecture diagrams</li>
+                                        <li>Runbooks and playbooks</li>
+                                        <li>API documentation</li>
+                                        <li>Change management logs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Security and Compliance</h2>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="space-y-4">
+                            <p class="text-gray-700">
+                                Security integrated into the DevOps lifecycle:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Security Practices:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Automated security scanning</li>
+                                        <li>Dependency auditing</li>
+                                        <li>Secret management</li>
+                                        <li>Access control</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Compliance:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Audit logging</li>
+                                        <li>Policy enforcement</li>
+                                        <li>Compliance scanning</li>
+                                        <li>Regular audits</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Related Articles</h2>
+                    <div class="grid gap-4">
+                        <a href="iac.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">Infrastructure as Code →</h3>
+                            <p class="text-gray-600">How we manage our infrastructure through code</p>
+                        </a>
+                        <a href="serverless.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">Serverless Architecture →</h3>
+                            <p class="text-gray-600">Our approach to serverless deployment and monitoring</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

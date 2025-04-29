@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summafy - Full Stack Implementation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <nav class="mb-8 flex justify-between items-center">
+            <div class="space-x-4">
+                <a href="../../summafy.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-arrow-left"></i> Project
+                </a>
+                <a href="./index.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-newspaper"></i> Blog
+                </a>
+            </div>
+            <div class="text-sm text-gray-600">
+                Published: April 29, 2025
+            </div>
+        </nav>
+        
+        <article>
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold mb-4">Full Stack Implementation</h1>
+                <p class="text-xl text-gray-600">Deep dive into Summafy's Vue.js frontend and Go backend architecture</p>
+            </header>
+
+            <div class="prose max-w-none">
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Frontend Architecture</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Vue.js Single Page Application</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Our frontend is built as a modern Single Page Application (SPA) using Vue.js 3 with the Composition API. This provides a robust foundation for building complex, interactive user interfaces while maintaining code organization and reusability.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Key Features:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Component-based architecture</li>
+                                        <li>Reactive state management with Vuex</li>
+                                        <li>Route management with Vue Router</li>
+                                        <li>Real-time updates via WebSocket</li>
+                                        <li>Progressive Web App capabilities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">State Management</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    We use Vuex for centralized state management, organizing our store into modules for different features:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Authentication state</li>
+                                        <li>Document processing status</li>
+                                        <li>User preferences</li>
+                                        <li>Application settings</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">UI Components</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Our UI is built with reusable components using Tailwind CSS for styling:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Document upload and preview</li>
+                                        <li>Progress tracking</li>
+                                        <li>Summary visualization</li>
+                                        <li>User settings panel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Backend Implementation</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Go REST API</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Our backend is implemented in Go, chosen for its performance, strong typing, and excellent concurrency support. The API follows RESTful principles and is structured using the Clean Architecture pattern.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Core Features:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>JWT-based authentication</li>
+                                        <li>Rate limiting middleware</li>
+                                        <li>Request validation</li>
+                                        <li>Error handling</li>
+                                        <li>Logging and monitoring</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">API Design</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    The API is organized into logical groups:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Authentication endpoints</li>
+                                        <li>Document management</li>
+                                        <li>Processing status</li>
+                                        <li>User management</li>
+                                        <li>System health</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Integration Points</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    The backend integrates with various AWS services:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>S3 for document storage</li>
+                                        <li>Lambda for processing</li>
+                                        <li>Step Functions for workflows</li>
+                                        <li>CloudWatch for monitoring</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Security Considerations</h2>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="space-y-4">
+                            <p class="text-gray-700">
+                                Security is implemented at multiple levels:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Frontend Security:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>CSRF protection</li>
+                                        <li>XSS prevention</li>
+                                        <li>Secure cookie handling</li>
+                                        <li>Input sanitization</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Backend Security:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>JWT validation</li>
+                                        <li>Rate limiting</li>
+                                        <li>Input validation</li>
+                                        <li>CORS policies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Related Articles</h2>
+                    <div class="grid gap-4">
+                        <a href="serverless.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">Serverless Architecture →</h3>
+                            <p class="text-gray-600">Learn about our serverless implementation</p>
+                        </a>
+                        <a href="devops.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">DevOps Practices →</h3>
+                            <p class="text-gray-600">How we deploy and maintain the application</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

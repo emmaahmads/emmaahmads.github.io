@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summafy - Serverless Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <nav class="mb-8 flex justify-between items-center">
+            <div class="space-x-4">
+                <a href="../../summafy.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-arrow-left"></i> Project
+                </a>
+                <a href="./index.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-newspaper"></i> Blog
+                </a>
+            </div>
+            <div class="text-sm text-gray-600">
+                Published: April 29, 2025
+            </div>
+        </nav>
+        
+        <article>
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold mb-4">Serverless Architecture</h1>
+                <p class="text-xl text-gray-600">How we leverage AWS Lambda and serverless services for scalable document processing</p>
+            </header>
+
+            <div class="prose max-w-none">
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Serverless Architecture Overview</h2>
+                    <div class="bg-white p-6 rounded-lg shadow mb-8">
+                        <div class="mb-6">
+                            <img src="../../assets/images/summafy-architecture-detailed.png" alt="Detailed System Architecture" class="w-full rounded-lg shadow-sm mb-4">
+                            <p class="text-sm text-gray-600 italic">Detailed serverless architecture diagram</p>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-gray-700">
+                                Our serverless architecture is designed to handle document processing at scale while maintaining cost efficiency. The system automatically scales based on demand and only incurs costs when actively processing documents.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Core Serverless Components</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">AWS Lambda Functions</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    We use multiple specialized Lambda functions for different aspects of document processing:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Document preprocessing and validation</li>
+                                        <li>Text extraction and cleaning</li>
+                                        <li>RAG-based summarization</li>
+                                        <li>Post-processing and formatting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">AWS Step Functions</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Step Functions orchestrate the document processing workflow:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Workflow coordination</li>
+                                        <li>Error handling and retries</li>
+                                        <li>State management</li>
+                                        <li>Parallel processing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">S3 Storage</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    S3 serves as our primary storage solution:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Document storage</li>
+                                        <li>Processing results</li>
+                                        <li>Event triggering</li>
+                                        <li>Lifecycle management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Event-Driven Processing</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Processing Pipeline</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    The document processing pipeline is fully event-driven:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                        <li>Document upload triggers S3 event</li>
+                                        <li>Lambda function initiates processing</li>
+                                        <li>Step Functions coordinate workflow</li>
+                                        <li>Status updates via WebSocket</li>
+                                        <li>Results stored in S3</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Scaling and Performance</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Our serverless architecture provides automatic scaling:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Concurrent Lambda executions</li>
+                                        <li>Parallel document processing</li>
+                                        <li>Auto-scaling based on load</li>
+                                        <li>Cost optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Monitoring and Observability</h2>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="space-y-4">
+                            <p class="text-gray-700">
+                                Comprehensive monitoring is implemented using:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">CloudWatch Metrics:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Function invocations</li>
+                                        <li>Error rates</li>
+                                        <li>Processing duration</li>
+                                        <li>Memory usage</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">X-Ray Tracing:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Request tracking</li>
+                                        <li>Performance analysis</li>
+                                        <li>Error debugging</li>
+                                        <li>Service maps</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Related Articles</h2>
+                    <div class="grid gap-4">
+                        <a href="iac.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">Infrastructure as Code →</h3>
+                            <p class="text-gray-600">How we manage our serverless infrastructure</p>
+                        </a>
+                        <a href="devops.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">DevOps Practices →</h3>
+                            <p class="text-gray-600">Our approach to deploying and monitoring serverless components</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

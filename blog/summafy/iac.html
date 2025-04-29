@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summafy - Infrastructure as Code</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <nav class="mb-8 flex justify-between items-center">
+            <div class="space-x-4">
+                <a href="../../summafy.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-arrow-left"></i> Project
+                </a>
+                <a href="./index.html" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-newspaper"></i> Blog
+                </a>
+            </div>
+            <div class="text-sm text-gray-600">
+                Published: April 29, 2025
+            </div>
+        </nav>
+        
+        <article>
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold mb-4">Infrastructure as Code</h1>
+                <p class="text-xl text-gray-600">Managing Summafy's infrastructure using Terraform and AWS CloudFormation</p>
+            </header>
+
+            <div class="prose max-w-none">
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Infrastructure Management Strategy</h2>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="space-y-4">
+                            <p class="text-gray-700">
+                                Summafy's infrastructure is entirely managed through code, primarily using Terraform for resource provisioning and AWS CloudFormation for serverless deployments. This approach ensures consistency, reproducibility, and version control of our infrastructure.
+                            </p>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h4 class="font-bold mb-2">Key Benefits:</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Version-controlled infrastructure</li>
+                                    <li>Reproducible environments</li>
+                                    <li>Automated deployments</li>
+                                    <li>Disaster recovery readiness</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Terraform Implementation</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Resource Organization</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Our Terraform configuration is organized into logical modules:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Networking (VPC, subnets, security groups)</li>
+                                        <li>Storage (S3 buckets, lifecycle policies)</li>
+                                        <li>Compute (Lambda functions, IAM roles)</li>
+                                        <li>Monitoring (CloudWatch, X-Ray)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">State Management</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Terraform state is managed remotely using:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>S3 backend for state storage</li>
+                                        <li>DynamoDB for state locking</li>
+                                        <li>Workspace-based environment separation</li>
+                                        <li>State file encryption</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Environment Management</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Multiple environments are managed through:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Terraform workspaces</li>
+                                        <li>Environment-specific variables</li>
+                                        <li>Conditional resource creation</li>
+                                        <li>Resource tagging strategies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">AWS CloudFormation Integration</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Serverless Framework</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    CloudFormation templates are used for serverless deployments:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Lambda function definitions</li>
+                                        <li>API Gateway configuration</li>
+                                        <li>Step Functions workflows</li>
+                                        <li>Event source mappings</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold mb-4">Resource Dependencies</h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Managing dependencies between Terraform and CloudFormation:
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Cross-stack references</li>
+                                        <li>Output sharing</li>
+                                        <li>Resource imports</li>
+                                        <li>Nested stacks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Security and Compliance</h2>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="space-y-4">
+                            <p class="text-gray-700">
+                                Security is enforced through infrastructure code:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Access Control:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>IAM roles and policies</li>
+                                        <li>Security group rules</li>
+                                        <li>KMS encryption</li>
+                                        <li>VPC endpoints</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <h4 class="font-bold mb-2">Compliance:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                        <li>Resource tagging</li>
+                                        <li>Audit logging</li>
+                                        <li>Policy enforcement</li>
+                                        <li>Compliance checks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Related Articles</h2>
+                    <div class="grid gap-4">
+                        <a href="serverless.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">Serverless Architecture →</h3>
+                            <p class="text-gray-600">Learn about the serverless components we manage</p>
+                        </a>
+                        <a href="devops.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-blue-600">DevOps Practices →</h3>
+                            <p class="text-gray-600">How we automate infrastructure deployment</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
