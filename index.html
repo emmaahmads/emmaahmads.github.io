@@ -592,89 +592,60 @@
     <!-- 4. Architecture Section -->
     <section id="architecture" class="section-padding border-t border-neutral-800">
         <div class="container">
-            <h2 class="text-3xl font-bold mb-8 text-accent">System Structure</h2>
+            <h2 class="text-3xl font-bold mb-8 text-accent">System Design Approach</h2>
             
-            <p class="text-neutral-400 mb-8">Below is a simplified view of how I approach structuring systems in my recent work:</p>
+            <p class="text-neutral-400 mb-8">I approach system design by structuring components around reliability, clear boundaries, and recoverability.</p>
             
             <!-- Architecture Diagram -->
             <div class="bg-card rounded-lg p-8 mb-8">
                 <pre class="text-neutral-400 font-mono text-sm overflow-x-auto">
-┌─────────────────────────────────────────────────────────────────┐
-│                         CLIENT LAYER                            │
-│              (Vue.js Frontend / API Consumers)                  │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-┌─────────────────────────────▼───────────────────────────────────┐
-│                      API GATEWAY                                │
-│                 (Flask / Go REST API)                           │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-┌─────────────────────────────▼───────────────────────────────────┐
-│                   SERVICE LAYER                                 │
-│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────────┐   │
-│  │   Document   │  │     RAG      │  │   LLM Orchestrator  │   │
-│  │   Service    │  │   Service    │  │    (LangChain)      │   │
-│  └──────────────┘  └──────────────┘  └─────────────────────┘   │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-┌─────────────────────────────▼───────────────────────────────────┐
-│              INFRASTRUCTURE LAYER                               │
-│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────────┐   │
-│  │  S3 Storage  │  │  PostgreSQL  │  │   Vector Database   │   │
-│  └──────────────┘  └──────────────┘  └─────────────────────┘   │
-│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────────┐   │
-│  │ AWS Lambda   │  │   Docker     │  │  LLM Providers      │   │
-│  └──────────────┘  └──────────────┘  │ (OpenAI/Ollama)     │   │
-│                                    └─────────────────────┘   │
-└─────────────────────────────────────────────────────────────────┘
+[Client / Entry Point]
+        ↓
+[API / Proxy Layer]
+        ↓
+
+[Distributed Components]
+
+├── Application Logic
+├── Data Processing / Pipeline
+└── Service Modules
+
+        ↓
+
+[Reliability Layer]
+• Replication
+• Redundancy
+
+        ↓
+
+[Failure Detection]
+• Heartbeat monitoring
+• Timeout validation
+
+        ↓
+
+[Recovery / Failover]
+• Node takeover
+• Service continuity
                 </pre>
             </div>
 
-            <!-- Key Principles -->
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-card rounded-lg p-6">
-                    <h4 class="font-mono text-lg font-bold mb-4 text-white">Key Principles</h4>
-                    <ul class="space-y-3 text-neutral-400">
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>A decoupled structure to support scalability and flexibility</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>LLM-agnostic design for flexibility</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>Containerized services for deployment flexibility</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>Separation of concerns across layers</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-card rounded-lg p-6">
-                    <h4 class="font-mono text-lg font-bold mb-4 text-white">Design Patterns</h4>
-                    <ul class="space-y-3 text-neutral-400">
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>Microservices with clear boundaries</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>Event-driven asynchronous processing</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>Adapter pattern for LLM abstraction</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-accent">→</span>
-                            <span>Circuit breaker for resilience</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <p class="text-neutral-400 mb-6">This approach is reflected across my work:</p>
+            
+            <ul class="space-y-2 text-neutral-400 mb-6">
+                <li class="flex gap-3">
+                    <span class="text-accent">→</span>
+                    <span><strong>Thesis</strong> → fault-tolerant distributed system with replication, heartbeat-based failure detection, and failover</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="text-accent">→</span>
+                    <span><strong>Summafy</strong> → multi-component architecture with separated API, RAG pipeline, and infrastructure layers</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="text-accent">→</span>
+                    <span><strong>GenAI</strong> → modular orchestration and extensible system structure</span>
+                </li>
+            </ul>
         </div>
     </section>
 
