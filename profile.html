@@ -3,92 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Ahmad Sirajudin - Profile</title>
+    <title>Emma Ahmad Sirajudin - Systems Architect Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4 py-8">
+<body class="bg-slate-950 text-slate-200 font-sans">
+    <div class="max-w-5xl mx-auto px-4 py-8">
+        <!-- Navigation -->
         <nav class="mb-8">
-            <a href="index.html" class="text-blue-600 hover:text-blue-800">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            <a href="index.html" class="text-cyan-400 hover:text-cyan-300 font-mono">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
             </a>
         </nav>
 
+        <!-- Header -->
         <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold mb-2">Emma Ahmad Sirajudin</h1>
-            <p class="text-xl text-gray-600">Systems Architect | Backend · Cloud · GenAI Infrastructure</p>
-            <div class="flex justify-center gap-4 mt-4">
-                <a href="https://linkedin.com/in/emma-ahmad-sirajudin/" class="text-blue-600 hover:text-blue-800" target="_blank">
+            <h1 class="text-4xl font-mono font-bold mb-2 text-emerald-400">Emma Ahmad Sirajudin</h1>
+            <p class="text-xl text-cyan-400 font-mono">Systems Architect | Backend · Cloud · GenAI Infrastructure</p>
+            <div class="flex justify-center gap-6 mt-6">
+                <a href="https://linkedin.com/in/emma-ahmad-sirajudin/" class="text-slate-400 hover:text-cyan-400 transition-colors" target="_blank">
                     <i class="fab fa-linkedin fa-lg"></i>
                 </a>
-                <a href="mailto:emmaahmadsirajudin@gmail.com" class="text-red-600 hover:text-red-800">
+                <a href="mailto:emmaahmadsirajudin@gmail.com" class="text-slate-400 hover:text-cyan-400 transition-colors">
                     <i class="fas fa-envelope fa-lg"></i>
                 </a>
-                <a href="https://github.com/emmaahmads" class="text-gray-800 hover:text-gray-600" target="_blank">
+                <a href="https://github.com/emmaahmads" class="text-slate-400 hover:text-cyan-400 transition-colors" target="_blank">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
             </div>
         </header>
 
+        <!-- About Section -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">About Me</h2>
-            <p class="text-gray-700 mb-6">
-                14+ years of experience in high-performance systems, transitioning from low-level C++ to cloud-native GenAI orchestration. I am a Senior Software Engineer with experience in embedded systems, manufacturing, academia, and web development. I served as a Product Owner at Motorola Solutions and practice Scrum, collaborating well with teams.
+            <h2 class="text-3xl font-mono font-bold mb-6 text-emerald-400 border-b border-slate-700 pb-4">About</h2>
+            <p class="text-slate-300 leading-relaxed">
+                14+ years of experience in high-performance systems, transitioning from low-level C++ to cloud-native GenAI orchestration. 
+                I am a Senior Software Engineer with experience in embedded systems, manufacturing, academia, and web development. 
+                I served as a Product Owner at Motorola Solutions and practice Scrum, collaborating well with teams.
             </p>
         </section>
 
+        <!-- Technical Pillars -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">🎯 Technical Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold mb-2">Languages</h3>
-                    <p class="text-gray-600">Golang, Python, C, C++</p>
+            <h2 class="text-3xl font-mono font-bold mb-6 text-emerald-400 border-b border-slate-700 pb-4">Technical Pillars</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-microchip text-purple-400 text-xl"></i>
+                        <h3 class="font-mono font-bold text-slate-100">Systems & Low-Level</h3>
+                    </div>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li>C/C++, Linux Kernel</li>
+                        <li>Firmware (BIOS/BSP)</li>
+                        <li>Concurrency & Threading</li>
+                        <li>Device Drivers</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold mb-2">Cloud & DevOps</h3>
-                    <p class="text-gray-600">AWS, Terraform, Docker</p>
+                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-cloud text-cyan-400 text-xl"></i>
+                        <h3 class="font-mono font-bold text-slate-100">Cloud & DevOps</h3>
+                    </div>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li>AWS (Certified Cloud Practitioner)</li>
+                        <li>Terraform, AWS CDK</li>
+                        <li>Docker, Kubernetes</li>
+                        <li>CI/CD Pipelines</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold mb-2">Web Technologies</h3>
-                    <p class="text-gray-600">Vue.js, HTML/CSS, Tailwind</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold mb-2">Database</h3>
-                    <p class="text-gray-600">PostgreSQL</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold mb-2">Other</h3>
-                    <p class="text-gray-600">Embedded Linux, Automation, Project Management, API</p>
+                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-brain text-emerald-400 text-xl"></i>
+                        <h3 class="font-mono font-bold text-slate-100">AI & Backend</h3>
+                    </div>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li>Python, Go</li>
+                        <li>GenAI Orchestration</li>
+                        <li>RAG, Vector Databases</li>
+                        <li>REST APIs, Microservices</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- Experience -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">💼 Experience</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold">Senior Software Engineer</h3>
-                    <p class="text-gray-600">Motorola Solutions (2024 - Present)</p>
-                    <ul class="list-disc list-inside text-gray-600">
+            <h2 class="text-3xl font-mono font-bold mb-6 text-emerald-400 border-b border-slate-700 pb-4">Experience</h2>
+            <div class="space-y-6">
+                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <h3 class="text-xl font-mono font-bold text-slate-100">Senior Software Engineer</h3>
+                        <span class="text-cyan-400 font-mono text-sm">Motorola Solutions (2024 - Present)</span>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-400 space-y-2">
                         <li>Leading the development of AI-powered solutions for public safety communications</li>
                         <li>Architecting scalable cloud infrastructure using AWS and Terraform</li>
                         <li>Mentoring junior engineers and leading code reviews</li>
                     </ul>
                 </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold">Software Engineer</h3>
-                    <p class="text-gray-600">Motorola Solutions (2022 - 2024)</p>
-                    <ul class="list-disc list-inside text-gray-600">
+                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <h3 class="text-xl font-mono font-bold text-slate-100">Software Engineer</h3>
+                        <span class="text-cyan-400 font-mono text-sm">Motorola Solutions (2022 - 2024)</span>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-400 space-y-2">
                         <li>Developing real-time communication systems for emergency services</li>
                         <li>Implementing microservices architecture with Golang</li>
                         <li>Optimizing system performance and reliability</li>
                     </ul>
                 </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold">Embedded Systems Engineer</h3>
-                    <p class="text-gray-600">NXP Semiconductors (2018 - 2022)</p>
-                    <ul class="list-disc list-inside text-gray-600">
+                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <h3 class="text-xl font-mono font-bold text-slate-100">Embedded Systems Engineer</h3>
+                        <span class="text-cyan-400 font-mono text-sm">NXP Semiconductors (2018 - 2022)</span>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-400 space-y-2">
                         <li>Designing and implementing embedded Linux systems</li>
                         <li>Developing device drivers and system-level applications</li>
                         <li>Leading cross-functional teams in product development</li>
@@ -97,39 +127,47 @@
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">🎓 Education</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold">M.Sc. in Informatics & Applied Mathematics (2015)</h3>
-                    <p class="text-gray-600">Universiti Malaysia Terengganu</p>
-                    <p class="text-gray-600 mt-2 text-sm">
-                        <strong>Thesis:</strong> <em>A New Technique for Distributed Data Replication Management</em><br>
-                        <strong>Core Focus:</strong> Engineered a high-availability (HA) framework for distributed bioinformatics repositories.<br>
-                        <strong>Key Achievement:</strong> Designed an autonomous fail-over system using C Sockets and MySQL replication that increased system availability by 70% and eliminated single points of failure (SPOF).<br>
-                        <strong>Tech Stack:</strong> LAMP stack (Linux, Apache, MySQL, PHP), C (POSIX threads, Sockets), BASH scripting
-                    </p>
+        <!-- Education -->
+        <section id="education" class="mb-12">
+            <h2 class="text-3xl font-mono font-bold mb-6 text-emerald-400 border-b border-slate-700 pb-4">Education & Research</h2>
+            <div class="space-y-6">
+                <div class="bg-slate-900 border border-purple-500/50 p-6 rounded-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <h3 class="text-xl font-mono font-bold text-purple-400">M.Sc. in Informatics & Applied Mathematics</h3>
+                        <span class="text-cyan-400 font-mono text-sm">2015</span>
+                    </div>
+                    <p class="text-slate-400 mb-4">Universiti Malaysia Terengganu</p>
+                    <div class="bg-slate-800 p-4 rounded border border-slate-600">
+                        <p class="text-slate-300 mb-2">
+                            <strong class="text-purple-400">Thesis:</strong> <em>A New Technique for Distributed Data Replication Management</em>
+                        </p>
+                        <p class="text-slate-400 text-sm mb-3">
+                            <strong class="text-slate-300">Core Focus:</strong> Engineered a high-availability (HA) framework for distributed bioinformatics repositories (NABTICS).
+                        </p>
+                        <p class="text-slate-400 text-sm mb-3">
+                            <strong class="text-slate-300">Key Achievement:</strong> Designed an autonomous fail-over system using C Sockets and MySQL replication that increased system availability by 70% and eliminated single points of failure (SPOF).
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="px-2 py-1 bg-slate-700 text-purple-300 rounded text-xs font-mono">C (POSIX/Sockets)</span>
+                            <span class="px-2 py-1 bg-slate-700 text-purple-300 rounded text-xs font-mono">MySQL Replication</span>
+                            <span class="px-2 py-1 bg-slate-700 text-purple-300 rounded text-xs font-mono">Bash</span>
+                            <span class="px-2 py-1 bg-slate-700 text-purple-300 rounded text-xs font-mono">LAMP Stack</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold">Bachelors of Engineering (Computer Engineering)</h3>
-                    <p class="text-gray-600">Vanderbilt University, USA</p>
+                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <h3 class="text-xl font-mono font-bold text-slate-100">Bachelors of Engineering (Computer Engineering)</h3>
+                        <span class="text-cyan-400 font-mono text-sm">Vanderbilt University, USA</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">🎯 Projects</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold">AI-Powered Communication System</h3>
-                    <p class="text-gray-600">Developed a real-time communication platform using AI for emergency response coordination</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="font-bold">Embedded Linux OS</h3>
-                    <p class="text-gray-600">Created a custom Linux distribution for IoT devices with optimized performance</p>
-                </div>
-            </div>
-        </section>
+        <!-- Footer -->
+        <footer class="text-center text-slate-500 text-sm font-mono pt-8 border-t border-slate-700">
+            <p>Built with precision. Designed for reliability.</p>
+        </footer>
     </div>
 </body>
 </html>

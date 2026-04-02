@@ -3,116 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summafy Project</title>
+    <title>Summafy - RAG Serverless Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4 py-8">
+<body class="bg-slate-950 text-slate-200 font-sans">
+    <div class="max-w-5xl mx-auto px-4 py-8">
+        <!-- Navigation -->
         <nav class="mb-8">
-            <a href="index.html" class="text-blue-600 hover:text-blue-800">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            <a href="index.html" class="text-cyan-400 hover:text-cyan-300 font-mono">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
             </a>
         </nav>
 
+        <!-- Header -->
         <header class="mb-12">
-            <h1 class="text-4xl font-bold mb-4">Summafy</h1>
-            <p class="text-xl text-gray-600">Document summarization platform with Generative AI and sophisticated workflows</p>
+            <div class="flex items-center gap-3 mb-4">
+                <i class="fas fa-file-alt text-4xl text-emerald-400"></i>
+                <div>
+                    <h1 class="text-4xl font-mono font-bold text-slate-100">Summafy</h1>
+                    <p class="text-xl text-emerald-400 font-mono">RAG-Enhanced Document Intelligence Platform</p>
+                </div>
+            </div>
         </header>
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold mb-6">Architecture Diagram & Links</h2>
-            <div class="bg-white p-6 rounded-lg shadow">
-                <a href="full-diagram.html" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4">
-                    <i class="fas fa-external-link-alt mr-2"></i> Full Architecture Diagram
+
+        <!-- Architecture Diagram -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-mono font-bold mb-6 text-emerald-400 border-b border-slate-700 pb-4">System Architecture</h2>
+            <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                <a href="full-diagram.html" target="_blank" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-mono mb-6">
+                    <i class="fas fa-external-link-alt mr-2"></i> View Full Architecture Diagram
+                </a>
+                <div class="grid md:grid-cols-4 gap-4 text-sm">
+                    <div class="bg-slate-800 p-4 rounded border border-slate-600 text-center">
+                        <i class="fas fa-upload text-emerald-400 mb-2 text-xl"></i>
+                        <p class="text-slate-300">S3 Document Ingestion</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded border border-slate-600 text-center">
+                        <i class="fas fa-cogs text-cyan-400 mb-2 text-xl"></i>
+                        <p class="text-slate-300">Lambda Processing</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded border border-slate-600 text-center">
+                        <i class="fas fa-database text-purple-400 mb-2 text-xl"></i>
+                        <p class="text-slate-300">RAG Vector Store</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded border border-slate-600 text-center">
+                        <i class="fas fa-brain text-emerald-400 mb-2 text-xl"></i>
+                        <p class="text-slate-300">GenAI Summarization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-mono font-bold mb-6 text-emerald-400 border-b border-slate-700 pb-4">Project Overview</h2>
+            <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    Summafy is an enterprise-grade AI-powered document summarization platform built on a serverless-first architecture. 
+                    It leverages Retrieval Augmented Generation (RAG) for enhanced context-aware summarization, 
+                    with event-driven workflows orchestrating document processing pipelines from ingestion to delivery.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-slate-800 p-4 rounded border border-slate-600">
+                        <h4 class="font-mono font-bold text-emerald-400 mb-2">Architecture Highlights</h4>
+                        <ul class="text-slate-400 text-sm space-y-1">
+                            <li>• Serverless event-driven workflows</li>
+                            <li>• Self-hosted RAG with vector databases</li>
+                            <li>• Microservices on AWS with Docker</li>
+                            <li>• OpenTelemetry observability</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded border border-slate-600">
+                        <h4 class="font-mono font-bold text-emerald-400 mb-2">Infrastructure</h4>
+                        <ul class="text-slate-400 text-sm space-y-1">
+                            <li>• Terraform & CloudFormation IaC</li>
+                            <li>• AWS SAM for serverless</li>
+                            <li>• GitHub Actions CI/CD</li>
+                            <li>• Multi-repo architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Repository Links -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-mono font-bold mb-6 text-emerald-400 border-b border-slate-700 pb-4">Repositories</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="https://github.com/emmaahmads/summafy-app" target="_blank" class="flex items-center bg-slate-900 border border-slate-700 p-4 rounded-lg hover:border-cyan-500 transition-colors">
+                    <i class="fab fa-github text-cyan-400 mr-3 text-xl"></i>
+                    <div>
+                        <h4 class="font-mono font-bold text-slate-100">summafy-app</h4>
+                        <p class="text-slate-400 text-sm">Backend API service</p>
+                    </div>
+                </a>
+                <a href="https://github.com/emmaahmads/summafy-frontend" target="_blank" class="flex items-center bg-slate-900 border border-slate-700 p-4 rounded-lg hover:border-cyan-500 transition-colors">
+                    <i class="fab fa-github text-cyan-400 mr-3 text-xl"></i>
+                    <div>
+                        <h4 class="font-mono font-bold text-slate-100">summafy-frontend</h4>
+                        <p class="text-slate-400 text-sm">Vue.js web interface</p>
+                    </div>
+                </a>
+                <a href="https://github.com/emmaahmads/summafy-rag" target="_blank" class="flex items-center bg-slate-900 border border-slate-700 p-4 rounded-lg hover:border-cyan-500 transition-colors">
+                    <i class="fab fa-github text-cyan-400 mr-3 text-xl"></i>
+                    <div>
+                        <h4 class="font-mono font-bold text-slate-100">summafy-rag</h4>
+                        <p class="text-slate-400 text-sm">RAG processing service</p>
+                    </div>
+                </a>
+                <a href="https://github.com/emmaahmads/summafy-serverless-devops" target="_blank" class="flex items-center bg-slate-900 border border-slate-700 p-4 rounded-lg hover:border-cyan-500 transition-colors">
+                    <i class="fab fa-github text-cyan-400 mr-3 text-xl"></i>
+                    <div>
+                        <h4 class="font-mono font-bold text-slate-100">summafy-serverless-devops</h4>
+                        <p class="text-slate-400 text-sm">Serverless infrastructure</p>
+                    </div>
                 </a>
             </div>
         </section>
 
-        <div class="prose max-w-none">
-            <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-6">Project Overview</h2>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="text-gray-700 mb-4">
-                        Summafy began as a learning project to explore backend and cloud application development. It has since evolved into a full-fledged AI-powered document summarization platform, comprising multiple AWS and GenAI components. The platform is designed with efficiency, security, and cost-sensitivity in mind, leveraging best practices from my experience as a Senior Software Engineer. It is deployed entirely on AWS using Docker and various AWS services, with OpenTelemetry for observability. The infrastructure is managed with Terraform, CloudFormation, and AWS SAM, utilizing Github Actions for automated deployment and orchestration. The serverless component features an orchestrated workflow of S3 events, self-hosted RAG, and document processing pipelines. Ongoing work includes transforming the platform into a microservices architecture to enhance scalability and maintainability.
-                    </p>
-                    <div class="grid gap-4">
-                        <a href="https://github.com/emmaahmads/summafy-app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-github mr-2"></i> Summafy Backend
-                        </a>
-                        <a href="https://github.com/emmaahmads/summafy-frontend" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-github mr-2"></i> Summafy Frontend
-                        </a>
-                        <a href="https://github.com/emmaahmads/summafy-rag" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-github mr-2"></i> Summafy RAG
-                        </a>
-                        <a href="https://github.com/emmaahmads/summafy-serverless-devops" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-github mr-2"></i> Summafy Serverless DevOps
-                        </a>
-                        <a href="https://github.com/emmaahmads/summafy-sam-app-lambda" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-github mr-2"></i> Summafy SAM App Lambda
-                        </a>
-                        <a href="https://github.com/emmaahmads/summafy-opea-megaservice" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-github mr-2"></i> Summafy OPEA Megaservice
-                        </a>
-                        <a href="https://github.com/emmaahmads/summafy-infra-for-dev" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-github mr-2"></i> Summafy Infra for Development
-                        </a>
-                        <!-- <a href="https://summafy.dev" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            <i class="fas fa-external-link-alt mr-2"></i> Live Demo
-                        </a> -->
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-6">Key Features</h2>
-                <div class="grid gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-bold mb-4">Smart Summarization</h3>
-                        <p class="text-gray-700">Generate concise, accurate summaries that capture the essential information while maintaining context and key details.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-bold mb-4">Multi-format Support</h3>
-                        <p class="text-gray-700">Process various document formats including PDF, Word, PowerPoint, and plain text files.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-bold mb-4">Customizable Output</h3>
-                        <p class="text-gray-700">Adjust summary length and focus areas based on specific needs and preferences.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-6">Technical Deep Dives</h2>
-                <div class="grid gap-4">
-                    <a href="blog/summafy/opea.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-blue-600">OPEA Megaservice →</h3>
-                        <p class="text-gray-600">Orchestrating document processing with event-driven architecture</p>
-                    </a>
-                    <a href="blog/summafy/fullstack.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-blue-600">Full Stack Implementation →</h3>
-                        <p class="text-gray-600">Deep dive into the frontend and backend architecture</p>
-                    </a>
-                    <a href="blog/summafy/serverless.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-blue-600">Serverless Architecture →</h3>
-                        <p class="text-gray-600">How we leverage serverless for scalable document processing</p>
-                    </a>
-                    <a href="blog/summafy/iac.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-blue-600">Infrastructure as Code →</h3>
-                        <p class="text-gray-600">Managing infrastructure through code</p>
-                    </a>
-                    <a href="blog/summafy/rag.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-blue-600">RAG Implementation →</h3>
-                        <p class="text-gray-600">How we use Retrieval Augmented Generation for enhanced summarization</p>
-                    </a>
-                    <a href="blog/summafy/devops.html" class="block bg-white p-4 rounded shadow hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-blue-600">DevOps Practices →</h3>
-                        <p class="text-gray-600">Our approach to CI/CD, monitoring, and operational excellence</p>
-                    </a>
-                </div>
-            </section> -->
-        </div>
+        <!-- Footer -->
+        <footer class="text-center text-slate-500 text-sm font-mono pt-8 border-t border-slate-700">
+            <p>Built with precision. Designed for reliability.</p>
+        </footer>
     </div>
 </body>
 </html>
