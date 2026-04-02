@@ -3,142 +3,556 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Ahmad Sirajudin - Systems Architect</title>
+    <meta name="description" content="Senior Systems Engineer with 14+ years experience in C++, distributed systems, and AI infrastructure.">
+    <title>Emma Ahmad | Senior Systems Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        h1, h2, h3, h4, .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .section-padding {
+            padding: 80px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background-color: #10b981;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background-color: #059669;
+        }
+        .btn-secondary {
+            border: 1px solid #10b981;
+            color: #10b981;
+        }
+        .btn-secondary:hover {
+            background-color: #10b981;
+            color: #0a0a0a;
+        }
+        .btn-tertiary {
+            border: 1px solid #525252;
+            color: #a3a3a3;
+        }
+        .btn-tertiary:hover {
+            border-color: #10b981;
+            color: #10b981;
+        }
+        .text-accent {
+            color: #10b981;
+        }
+        .bg-card {
+            background-color: #171717;
+            border: 1px solid #262626;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            border-color: #10b981;
+        }
+        .project-links {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #262626;
+        }
+        .project-links a {
+            margin-right: 16px;
+            font-weight: 500;
+            color: #10b981;
+            text-decoration: none;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        .repo-guide {
+            font-size: 0.875rem;
+            color: #737373;
+            margin-top: 12px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .repo-guide strong {
+            color: #a3a3a3;
+        }
+        .reality {
+            font-size: 0.875rem;
+            color: #737373;
+            margin-top: 12px;
+            font-style: italic;
+        }
+        .impact {
+            margin-top: 12px;
+            padding-left: 16px;
+        }
+        .impact li {
+            color: #a3a3a3;
+            font-size: 0.875rem;
+            margin-bottom: 4px;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid #262626;
+            padding: 12px 20px;
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        nav a {
+            color: #a3a3a3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #10b981;
+        }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans">
-    <div class="max-w-5xl mx-auto px-4 py-12">
-        <!-- Hero Section -->
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-mono font-bold mb-4 text-emerald-400">Emma Ahmad Sirajudin</h1>
-            <p class="text-2xl text-cyan-400 font-mono mb-3">Systems Architect | Backend · Cloud · GenAI Infrastructure</p>
-            <p class="text-lg text-slate-400 mb-6">14+ years of engineering high-performance systems—from low-level C++ firmware to cloud-native GenAI orchestration</p>
-            <p class="text-sm text-emerald-500 font-mono tracking-wider uppercase">Building for Reliability, Scalability, and Fault Tolerance</p>
-            <div class="flex justify-center gap-6 mt-8">
-                <a href="https://linkedin.com/in/emma-ahmad-sirajudin/" class="text-slate-400 hover:text-cyan-400 transition-colors" target="_blank">
-                    <i class="fab fa-linkedin fa-lg"></i>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#projects">Projects</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#engineering-depth">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="section-padding min-h-screen flex items-center">
+        <div class="container">
+            <p class="text-accent font-mono text-sm mb-4 tracking-wider">SENIOR SYSTEMS ENGINEER</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-white">Emma Ahmad</h1>
+            <h2 class="text-2xl md:text-3xl font-mono text-neutral-400 mb-6">14+ Years of Experience</h2>
+            <p class="text-xl text-neutral-300 mb-2">C/C++ • Distributed Systems • AI Infrastructure</p>
+            <p class="text-neutral-400 leading-relaxed max-w-2xl mb-2">
+                I work on designing and debugging systems across firmware, backend, and cloud —
+                with a focus on performance, reliability, and scalability where needed.
+            </p>
+            <p class="text-neutral-500 leading-relaxed max-w-2xl mb-8">
+                14+ years working across low-level systems, backend services, and cloud environments.
+                More recently, I've been exploring AI systems and multi-agent architectures.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#architecture" class="btn btn-secondary">View Architecture</a>
+                <a href="emmaahmads-resume-full.pdf" class="btn btn-tertiary" target="_blank">Download Resume</a>
+            </div>
+            <div class="flex gap-6 mt-12">
+                <a href="https://github.com/emmaahmads" target="_blank" class="text-neutral-500 hover:text-accent transition-colors">
+                    <i class="fab fa-github text-xl"></i>
                 </a>
-                <a href="mailto:emmaahmadsirajudin@gmail.com" class="text-slate-400 hover:text-cyan-400 transition-colors">
-                    <i class="fas fa-envelope fa-lg"></i>
+                <a href="https://linkedin.com/in/emma-ahmad-sirajudin/" target="_blank" class="text-neutral-500 hover:text-accent transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
                 </a>
-                <a href="https://github.com/emmaahmads" class="text-slate-400 hover:text-cyan-400 transition-colors" target="_blank">
-                    <i class="fab fa-github fa-lg"></i>
-                </a>
-                <a href="profile.html" class="text-slate-400 hover:text-cyan-400 transition-colors">
-                    <i class="fas fa-user-circle fa-lg"></i>
+                <a href="mailto:emmaahmadsirajudin@gmail.com" class="text-neutral-500 hover:text-accent transition-colors">
+                    <i class="fas fa-envelope text-xl"></i>
                 </a>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- Systems Portfolio -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-mono font-bold mb-8 text-emerald-400 border-b border-slate-700 pb-4">Systems Portfolio</h2>
+    <!-- 2. Value Proposition Section -->
+    <section id="what-i-do" class="section-padding border-t border-neutral-800">
+        <div class="container">
+            <h2 class="text-3xl font-bold mb-12 text-accent">My Experience Includes</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-mono text-lg font-bold mb-4 text-white">Systems Engineering</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li>• Working with multithreading, concurrency</li>
+                        <li>• Debugging production issues in my experience</li>
+                        <li>• Low-level Linux, firmware (BIOS/BSP)</li>
+                        <li>• Performance tuning where needed</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-mono text-lg font-bold mb-4 text-white">Backend & Distributed Systems</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li>• API design and microservices</li>
+                        <li>• Containerized architectures</li>
+                        <li>• Building fault-tolerant systems</li>
+                        <li>• High-availability frameworks</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-mono text-lg font-bold mb-4 text-white">AI Infrastructure</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li>• Multi-agent orchestration</li>
+                        <li>• LLM-agnostic system structures</li>
+                        <li>• Automation pipelines</li>
+                        <li>• RAG systems in recent work</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Featured Projects Section -->
+    <section id="projects" class="section-padding border-t border-neutral-800">
+        <div class="container">
+            <h2 class="text-3xl font-bold mb-12 text-accent">Featured Projects</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- GenAI Project -->
-                <a href="genai-language-learning.html" class="block group">
-                    <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg hover:border-cyan-500 hover:shadow-lg hover:shadow-cyan-500/20 transition-all h-full">
-                        <div class="flex items-center justify-between mb-4">
-                            <i class="fas fa-robot text-3xl text-cyan-400"></i>
-                            <span class="text-xs text-emerald-400 font-mono">GenAI Infrastructure</span>
-                        </div>
-                        <h3 class="text-xl font-mono font-bold mb-2 text-slate-100 group-hover:text-cyan-400 transition-colors">GenAI Language Architect</h3>
-                        <p class="text-slate-400 text-sm mb-4">A decoupled multi-agent platform featuring custom Dockerized environments and LLM-agnostic orchestration. Focuses on reproducible AI infrastructure and prompt engineering patterns.</p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 bg-slate-800 text-cyan-400 rounded text-xs font-mono border border-slate-600">Python (Flask)</span>
-                            <span class="px-2 py-1 bg-slate-800 text-cyan-400 rounded text-xs font-mono border border-slate-600">LangChain</span>
-                            <span class="px-2 py-1 bg-slate-800 text-cyan-400 rounded text-xs font-mono border border-slate-600">Docker</span>
-                            <span class="px-2 py-1 bg-slate-800 text-cyan-400 rounded text-xs font-mono border border-slate-600">AWS CDK</span>
-                        </div>
+            <!-- Project 1: GenAI Multi-Agent System -->
+            <div class="bg-card rounded-lg p-8 mb-8 transition-all hover-lift">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-robot text-accent text-2xl"></i>
+                    <h3 class="text-2xl font-bold text-white">GenAI Multi-Agent Learning System</h3>
+                </div>
+                
+                <p class="text-neutral-500 text-sm mb-4 italic">This project explores multi-agent orchestration for adaptive learning experiences.</p>
+                
+                <div class="space-y-4 text-neutral-300">
+                    <p><strong class="text-white">Problem:</strong> Traditional language learning apps lack adaptability and structured reasoning capabilities. There's a need for context-aware, personalized learning experiences.</p>
+                    
+                    <p><strong class="text-white">Design:</strong> I worked on the design of a modular system structure separating UI, orchestration, and LLM layers. The approach allows swapping providers (OpenAI, Ollama) without code changes.</p>
+                    
+                    <div>
+                        <strong class="text-white">Implementation:</strong>
+                        <ul class="mt-2 ml-4 space-y-1 text-neutral-400">
+                            <li>• Containerized Flask services with Docker</li>
+                            <li>• LangChain-based orchestration layer</li>
+                            <li>• Agent-based task execution workflows</li>
+                            <li>• Reproducible environments with Docker Compose</li>
+                        </ul>
                     </div>
-                </a>
+                    
+                    <p><strong class="text-white">Tradeoffs:</strong> Balancing flexibility with system complexity, and abstraction with performance. This is an area I'm continuing to refine, particularly around scaling and system complexity.</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mt-6 pt-6 border-t border-neutral-800">
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Python</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Flask</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">LangChain</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Docker</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">OpenAI</span>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/emmaahmads/genai-language-architect" target="_blank">
+                        <i class="fab fa-github mr-1"></i>View Code
+                    </a>
+                </div>
+                
+                <p class="repo-guide">
+                    <strong>What to look at:</strong><br>
+                    • /app/services → orchestration and agent logic<br>
+                    • /app/llm → LLM provider abstraction<br>
+                    • docker-compose.yml → environment setup<br>
+                    • README → system overview
+                </p>
+                
+                <p class="reality">
+                    This was built as an exploratory project to better understand system design tradeoffs and multi-agent architecture decisions.
+                </p>
+            </div>
 
-                <!-- Summafy Project -->
-                <a href="summafy.html" class="block group">
-                    <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/20 transition-all h-full">
-                        <div class="flex items-center justify-between mb-4">
-                            <i class="fas fa-file-alt text-3xl text-emerald-400"></i>
-                            <span class="text-xs text-emerald-400 font-mono">RAG / Serverless</span>
-                        </div>
-                        <h3 class="text-xl font-mono font-bold mb-2 text-slate-100 group-hover:text-emerald-400 transition-colors">Summafy</h3>
-                        <p class="text-slate-400 text-sm mb-4">Generative AI Document Summarization Platform with RAG-Enhanced Processing. Enterprise-grade serverless architecture for document intelligence.</p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded text-xs font-mono border border-slate-600">Go</span>
-                            <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded text-xs font-mono border border-slate-600">AWS</span>
-                            <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded text-xs font-mono border border-slate-600">RAG</span>
-                            <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded text-xs font-mono border border-slate-600">Serverless</span>
-                        </div>
+            <!-- Project 2: Summafy RAG Platform -->
+            <div class="bg-card rounded-lg p-8 transition-all hover-lift">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-file-alt text-accent text-2xl"></i>
+                    <h3 class="text-2xl font-bold text-white">Summafy - RAG Document Intelligence</h3>
+                </div>
+                
+                <p class="text-neutral-500 text-sm mb-4 italic">This project explores document processing with semantic understanding using RAG.</p>
+                
+                <div class="space-y-4 text-neutral-300">
+                    <p><strong class="text-white">Problem:</strong> Enterprises need to process large volumes of documents for insights, but traditional keyword search misses context and semantic meaning.</p>
+                    
+                    <p><strong class="text-white">Design:</strong> I worked on a serverless-first approach with event-driven workflows. S3 triggers → Lambda processing → RAG enrichment → GenAI summarization.</p>
+                    
+                    <div>
+                        <strong class="text-white">Implementation:</strong>
+                        <ul class="mt-2 ml-4 space-y-1 text-neutral-400">
+                            <li>• Go backend with REST API</li>
+                            <li>• Self-hosted RAG with vector database</li>
+                            <li>• AWS Lambda + S3 event-driven pipeline</li>
+                            <li>• Terraform/CloudFormation IaC</li>
+                        </ul>
                     </div>
-                </a>
+                    
+                    <p><strong class="text-white">Tradeoffs:</strong> Balancing serverless cold-start latency with operational simplicity. The multi-repo structure adds complexity but enables independent scaling where needed.</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mt-6 pt-6 border-t border-neutral-800">
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Go</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">AWS</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">RAG</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Serverless</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Terraform</span>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/emmaahmads/summafy" target="_blank">
+                        <i class="fab fa-github mr-1"></i>View Code
+                    </a>
+                </div>
+                
+                <p class="repo-guide">
+                    <strong>What to look at:</strong><br>
+                    • /cmd/server → Go API entry point<br>
+                    • /internal/rag → RAG processing logic<br>
+                    • /infra/terraform → infrastructure as code<br>
+                    • README → architecture overview
+                </p>
+                
+                <ul class="impact">
+                    <li>Handled concurrent document processing across multiple service components</li>
+                    <li>Structured services for modularity and extensibility</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                <!-- Thesis Project -->
-                <a href="profile.html#education" class="block group">
-                    <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all h-full">
-                        <div class="flex items-center justify-between mb-4">
-                            <i class="fas fa-network-wired text-3xl text-purple-400"></i>
-                            <span class="text-xs text-purple-400 font-mono">Distributed Systems</span>
-                        </div>
-                        <h3 class="text-xl font-mono font-bold mb-2 text-slate-100 group-hover:text-purple-400 transition-colors">Distributed Data Replication Framework</h3>
-                        <p class="text-slate-400 text-sm mb-4">High-availability (HA) framework for distributed bioinformatics repositories. 70% increase in system availability through autonomous IP fail-over and heartbeat monitoring.</p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 bg-slate-800 text-purple-400 rounded text-xs font-mono border border-slate-600">C (POSIX/Sockets)</span>
-                            <span class="px-2 py-1 bg-slate-800 text-purple-400 rounded text-xs font-mono border border-slate-600">MySQL Replication</span>
-                            <span class="px-2 py-1 bg-slate-800 text-purple-400 rounded text-xs font-mono border border-slate-600">Bash</span>
-                        </div>
-                    </div>
+    <!-- 4. Architecture Section -->
+    <section id="architecture" class="section-padding border-t border-neutral-800">
+        <div class="container">
+            <h2 class="text-3xl font-bold mb-8 text-accent">System Structure</h2>
+            
+            <p class="text-neutral-400 mb-8">Below is a simplified view of how I approach structuring systems in my recent work:</p>
+            
+            <!-- Architecture Diagram -->
+            <div class="bg-card rounded-lg p-8 mb-8">
+                <pre class="text-neutral-400 font-mono text-sm overflow-x-auto">
+┌─────────────────────────────────────────────────────────────────┐
+│                         CLIENT LAYER                            │
+│              (Vue.js Frontend / API Consumers)                  │
+└─────────────────────────────┬───────────────────────────────────┘
+                              │
+┌─────────────────────────────▼───────────────────────────────────┐
+│                      API GATEWAY                                │
+│                 (Flask / Go REST API)                           │
+└─────────────────────────────┬───────────────────────────────────┘
+                              │
+┌─────────────────────────────▼───────────────────────────────────┐
+│                   SERVICE LAYER                                 │
+│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────────┐   │
+│  │   Document   │  │     RAG      │  │   LLM Orchestrator  │   │
+│  │   Service    │  │   Service    │  │    (LangChain)      │   │
+│  └──────────────┘  └──────────────┘  └─────────────────────┘   │
+└─────────────────────────────┬───────────────────────────────────┘
+                              │
+┌─────────────────────────────▼───────────────────────────────────┐
+│              INFRASTRUCTURE LAYER                               │
+│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────────┐   │
+│  │  S3 Storage  │  │  PostgreSQL  │  │   Vector Database   │   │
+│  └──────────────┘  └──────────────┘  └─────────────────────┘   │
+│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────────┐   │
+│  │ AWS Lambda   │  │   Docker     │  │  LLM Providers      │   │
+│  └──────────────┘  └──────────────┘  │ (OpenAI/Ollama)     │   │
+│                                    └─────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+
+            <!-- Key Principles -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-card rounded-lg p-6">
+                    <h4 class="font-mono text-lg font-bold mb-4 text-white">Key Principles</h4>
+                    <ul class="space-y-3 text-neutral-400">
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>A decoupled structure to support scalability and flexibility</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>LLM-agnostic design for flexibility</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>Containerized services for deployment flexibility</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>Separation of concerns across layers</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-card rounded-lg p-6">
+                    <h4 class="font-mono text-lg font-bold mb-4 text-white">Design Patterns</h4>
+                    <ul class="space-y-3 text-neutral-400">
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>Microservices with clear boundaries</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>Event-driven asynchronous processing</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>Adapter pattern for LLM abstraction</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">→</span>
+                            <span>Circuit breaker for resilience</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Engineering Experience Section -->
+    <section id="engineering-depth" class="section-padding border-t border-neutral-800">
+        <div class="container">
+            <h2 class="text-3xl font-bold mb-12 text-accent">Engineering Experience</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-card rounded-lg p-6">
+                    <h3 class="font-mono text-lg font-bold mb-4 text-white">Systems & Low-Level</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li>• Experience with C/C++ development</li>
+                        <li>• Firmware interaction (BIOS/BSP)</li>
+                        <li>• Linux systems programming</li>
+                        <li>• Memory management & optimization</li>
+                    </ul>
+                </div>
+                <div class="bg-card rounded-lg p-6">
+                    <h3 class="font-mono text-lg font-bold mb-4 text-white">Concurrency & Performance</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li>• Experience with multithreading and synchronization</li>
+                        <li>• Debugging race conditions</li>
+                        <li>• Performance optimization work</li>
+                        <li>• POSIX threads, async I/O</li>
+                    </ul>
+                </div>
+                <div class="bg-card rounded-lg p-6">
+                    <h3 class="font-mono text-lg font-bold mb-4 text-white">Backend Systems</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li>• REST APIs and microservices</li>
+                        <li>• Database design (SQL & NoSQL)</li>
+                        <li>• Distributed system patterns</li>
+                        <li>• API gateway & service structure</li>
+                    </ul>
+                </div>
+                <div class="bg-card rounded-lg p-6">
+                    <h3 class="font-mono text-lg font-bold mb-4 text-white">DevOps & Infrastructure</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li>• Docker and containerization</li>
+                        <li>• CI/CD pipelines (GitHub Actions)</li>
+                        <li>• Infrastructure as Code (Terraform)</li>
+                        <li>• Cloud deployment with AWS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Tech Stack Section -->
+    <section id="tech-stack" class="section-padding border-t border-neutral-800">
+        <div class="container">
+            <h2 class="text-3xl font-bold mb-8 text-accent">Tech Stack</h2>
+            <p class="text-neutral-400 mb-8">Technologies I've worked with across different projects:</p>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div>
+                    <h4 class="font-mono text-sm font-bold mb-3 text-white uppercase tracking-wider">Languages</h4>
+                    <p class="text-neutral-400">C, C++, Go, Python, JavaScript</p>
+                </div>
+                <div>
+                    <h4 class="font-mono text-sm font-bold mb-3 text-white uppercase tracking-wider">Systems</h4>
+                    <p class="text-neutral-400">Linux, Firmware, Networking, POSIX</p>
+                </div>
+                <div>
+                    <h4 class="font-mono text-sm font-bold mb-3 text-white uppercase tracking-wider">Backend</h4>
+                    <p class="text-neutral-400">REST APIs, Microservices, Flask, Gin</p>
+                </div>
+                <div>
+                    <h4 class="font-mono text-sm font-bold mb-3 text-white uppercase tracking-wider">AI / GenAI</h4>
+                    <p class="text-neutral-400">LLMs, LangChain, RAG, Multi-Agent</p>
+                </div>
+                <div>
+                    <h4 class="font-mono text-sm font-bold mb-3 text-white uppercase tracking-wider">DevOps</h4>
+                    <p class="text-neutral-400">Docker, CI/CD, AWS, Terraform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact / CTA Section -->
+    <section id="contact" class="section-padding border-t border-neutral-800">
+        <div class="container">
+            <h2 class="text-3xl font-bold mb-8 text-accent">Get In Touch</h2>
+            
+            <div class="bg-card rounded-lg p-8 mb-8">
+                <p class="text-white text-lg mb-6">Open to opportunities in:</p>
+                <ul class="space-y-3 text-neutral-400 mb-8">
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check text-accent"></i>
+                        <span>Senior Backend / Systems Engineering</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check text-accent"></i>
+                        <span>AI Infrastructure / Platform Engineering</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check text-accent"></i>
+                        <span>Low-latency / High-performance systems</span>
+                    </li>
+                </ul>
+                
+                <p class="text-neutral-500 mb-6">If my background aligns with what you're looking for, feel free to reach out.</p>
+                
+                <div class="flex flex-wrap gap-6 text-neutral-400">
+                    <a href="mailto:emmaahmadsirajudin@gmail.com" class="flex items-center gap-2 hover:text-accent transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        <span>emmaahmadsirajudin@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/emmaahmads" target="_blank" class="flex items-center gap-2 hover:text-accent transition-colors">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/emmaahmads</span>
+                    </a>
+                    <a href="https://linkedin.com/in/emma-ahmad-sirajudin/" target="_blank" class="flex items-center gap-2 hover:text-accent transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/emma-ahmad-sirajudin</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="emmaahmads-resume-full.pdf" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-download mr-2"></i>Download Full Resume
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Technical Pillars -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-mono font-bold mb-8 text-emerald-400 border-b border-slate-700 pb-4">Technical Pillars</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-microchip text-purple-400 text-xl"></i>
-                        <h3 class="font-mono font-bold text-slate-100">Systems & Low-Level</h3>
-                    </div>
-                    <ul class="text-slate-400 text-sm space-y-2">
-                        <li>C/C++, Linux Kernel</li>
-                        <li>Firmware (BIOS/BSP)</li>
-                        <li>Concurrency & Threading</li>
-                        <li>Device Drivers</li>
-                    </ul>
-                </div>
-                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-cloud text-cyan-400 text-xl"></i>
-                        <h3 class="font-mono font-bold text-slate-100">Cloud & DevOps</h3>
-                    </div>
-                    <ul class="text-slate-400 text-sm space-y-2">
-                        <li>AWS (Certified Cloud Practitioner)</li>
-                        <li>Terraform, AWS CDK</li>
-                        <li>Docker, Kubernetes</li>
-                        <li>CI/CD Pipelines</li>
-                    </ul>
-                </div>
-                <div class="bg-slate-900 border border-slate-700 p-6 rounded-lg">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-brain text-emerald-400 text-xl"></i>
-                        <h3 class="font-mono font-bold text-slate-100">AI & Backend</h3>
-                    </div>
-                    <ul class="text-slate-400 text-sm space-y-2">
-                        <li>Python, Go</li>
-                        <li>GenAI Orchestration</li>
-                        <li>RAG, Vector Databases</li>
-                        <li>REST APIs, Microservices</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Footer -->
+    <footer class="py-8 border-t border-neutral-800 text-center text-neutral-600 text-sm font-mono">
+        <p>Built with precision. 14+ years of engineering.</p>
+    </footer>
 
-        <!-- Footer -->
-        <footer class="text-center text-slate-500 text-sm font-mono">
-            <p>Built with precision. Designed for reliability.</p>
-        </footer>
-    </div>
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
