@@ -95,6 +95,18 @@
             margin-top: 12px;
             font-style: italic;
         }
+        .project-note {
+            font-size: 0.875rem;
+            color: #a3a3a3;
+            margin-top: 12px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .repo-note {
+            font-size: 0.875rem;
+            color: #737373;
+            margin-top: 8px;
+        }
         .impact {
             margin-top: 12px;
             padding-left: 16px;
@@ -221,12 +233,17 @@
                     <h3 class="text-2xl font-bold text-white">GenAI Multi-Agent Learning System</h3>
                 </div>
                 
-                <p class="text-neutral-500 text-sm mb-4 italic">This project explores multi-agent orchestration for adaptive learning experiences.</p>
+                <p class="text-neutral-500 text-sm mb-4 italic">This project explores multi-agent architecture patterns for adaptive learning experiences.</p>
+                
+                <p class="project-note">
+                    This project explores architectural patterns for modular, multi-agent AI systems,
+                    with an emphasis on orchestration and extensibility. The ideas explored here continue to influence how I approach system design in newer work.
+                </p>
                 
                 <div class="space-y-4 text-neutral-300">
                     <p><strong class="text-white">Problem:</strong> Traditional language learning apps lack adaptability and structured reasoning capabilities. There's a need for context-aware, personalized learning experiences.</p>
                     
-                    <p><strong class="text-white">Design:</strong> I worked on the design of a modular system structure separating UI, orchestration, and LLM layers. The approach allows swapping providers (OpenAI, Ollama) without code changes.</p>
+                    <p><strong class="text-white">Design:</strong> I worked on the design of a modular architecture approach separating UI, orchestration, and LLM layers. The LLM-agnostic design approach allows swapping providers (OpenAI, Ollama) without code changes.</p>
                     
                     <div>
                         <strong class="text-white">Implementation:</strong>
@@ -257,10 +274,8 @@
                 
                 <p class="repo-guide">
                     <strong>What to look at:</strong><br>
-                    • /app/services → orchestration and agent logic<br>
-                    • /app/llm → LLM provider abstraction<br>
-                    • docker-compose.yml → environment setup<br>
-                    • README → system overview
+                    • README → architecture overview<br>
+                    • core modules → system structure and orchestration logic
                 </p>
                 
                 <p class="reality">
@@ -268,14 +283,43 @@
                 </p>
             </div>
 
-            <!-- Project 2: Summafy RAG Platform -->
+            <!-- Project 2: Summafy — Distributed Summarization System -->
             <div class="bg-card rounded-lg p-8 transition-all hover-lift">
                 <div class="flex items-center gap-3 mb-4">
                     <i class="fas fa-file-alt text-accent text-2xl"></i>
-                    <h3 class="text-2xl font-bold text-white">Summafy - RAG Document Intelligence</h3>
+                    <h3 class="text-2xl font-bold text-white">Summafy — Distributed Summarization System</h3>
                 </div>
                 
-                <p class="text-neutral-500 text-sm mb-4 italic">This project explores document processing with semantic understanding using RAG.</p>
+                <p class="text-neutral-400 mb-4">
+                    Summafy is a distributed summarization system composed of multiple components,
+                    including RAG pipelines, serverless services, and infrastructure-as-code.
+                </p>
+                
+                <p class="text-neutral-500 text-sm mb-4">
+                    The project is structured across multiple repositories to reflect separation of concerns
+                    between data processing, application logic, and deployment infrastructure.
+                </p>
+                
+                <!-- ASCII Architecture -->
+                <div class="bg-neutral-900 rounded p-4 mb-4 font-mono text-sm text-neutral-400">
+                    <pre class="overflow-x-auto">
+[Client]
+   ↓
+[API / Serverless Layer]
+   ↓
+[RAG Pipeline]
+   ↓
+[Storage / Vector DB]
+
+[Infrastructure (IaC)]
+   ↳ provisioning and deployment
+                    </pre>
+                </div>
+                
+                <p class="project-note">
+                    The system is intentionally split across repositories to isolate responsibilities
+                    and allow independent iteration on infrastructure, data pipelines, and application logic.
+                </p>
                 
                 <div class="space-y-4 text-neutral-300">
                     <p><strong class="text-white">Problem:</strong> Enterprises need to process large volumes of documents for insights, but traditional keyword search misses context and semantic meaning.</p>
@@ -292,8 +336,12 @@
                         </ul>
                     </div>
                     
-                    <p><strong class="text-white">Tradeoffs:</strong> Balancing serverless cold-start latency with operational simplicity. The multi-repo structure adds complexity but enables independent scaling where needed.</p>
+                    <p><strong class="text-white">Tradeoffs:</strong> This structure improves modularity and separation of concerns, but introduces additional coordination complexity across components.</p>
                 </div>
+                
+                <p class="project-note">
+                    This project reflects an ongoing exploration of system design patterns for scalable AI-driven applications.
+                </p>
                 
                 <div class="flex flex-wrap gap-2 mt-6 pt-6 border-t border-neutral-800">
                     <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Go</span>
@@ -304,23 +352,65 @@
                 </div>
                 
                 <div class="project-links">
-                    <a href="https://github.com/emmaahmads/summafy" target="_blank">
-                        <i class="fab fa-github mr-1"></i>View Code
-                    </a>
+                    <p class="text-sm text-neutral-400 mb-2"><strong>Repositories:</strong></p>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="https://github.com/emmaahmads/summafy-infrastructure" target="_blank">
+                                <i class="fab fa-github mr-1"></i>Infrastructure (IaC)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/emmaahmads/summafy-rag" target="_blank">
+                                <i class="fab fa-github mr-1"></i>RAG Pipeline
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/emmaahmads/summafy" target="_blank">
+                                <i class="fab fa-github mr-1"></i>Serverless/API
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 
                 <p class="repo-guide">
-                    <strong>What to look at:</strong><br>
-                    • /cmd/server → Go API entry point<br>
-                    • /internal/rag → RAG processing logic<br>
-                    • /infra/terraform → infrastructure as code<br>
-                    • README → architecture overview
+                    <strong>How to navigate:</strong><br>
+                    • Start with the Serverless/API repo for entry point<br>
+                    • RAG repo contains summarization and retrieval logic<br>
+                    • IaC repo defines deployment and infrastructure setup
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MSc Thesis Section -->
+    <section id="thesis" class="section-padding border-t border-neutral-800">
+        <div class="container">
+            <h2 class="text-3xl font-bold mb-8 text-accent">MSc Thesis</h2>
+            
+            <div class="bg-card rounded-lg p-8">
+                <p class="text-lg text-white mb-4">A New Technique for Distributed Data Replication Management</p>
+                
+                <p class="text-neutral-400 mb-4">
+                    This work focused on improving data availability across distributed bioinformatics repositories 
+                    through autonomous failover mechanisms and heartbeat monitoring systems.
                 </p>
                 
-                <ul class="impact">
-                    <li>Handled concurrent document processing across multiple service components</li>
-                    <li>Structured services for modularity and extensibility</li>
+                <ul class="space-y-2 text-neutral-400 mb-6">
+                    <li>• High-availability framework design for distributed systems</li>
+                    <li>• C-based implementation using POSIX threads and sockets</li>
+                    <li>• MySQL replication management with automatic IP failover</li>
                 </ul>
+                
+                <p class="text-neutral-500 mb-6">
+                    This work continues to influence how I approach system design and problem solving, 
+                    particularly around reliability and fault tolerance.
+                </p>
+                
+                <div class="project-links">
+                    <a href="#" target="_blank">
+                        <i class="fas fa-file-pdf mr-1"></i>Read Thesis
+                    </a>
+                </div>
             </div>
         </div>
     </section>
