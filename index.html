@@ -107,6 +107,20 @@
             color: #737373;
             margin-top: 8px;
         }
+        .badges {
+            margin-bottom: 24px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            margin: 4px 8px 4px 0;
+            font-size: 0.8rem;
+            border: 1px solid #262626;
+            border-radius: 12px;
+            background: #171717;
+            color: #a3a3a3;
+            font-family: 'JetBrains Mono', monospace;
+        }
         .impact {
             margin-top: 12px;
             padding-left: 16px;
@@ -401,6 +415,36 @@
                     <li>• MySQL replication management with automatic IP failover</li>
                 </ul>
                 
+                <h4 class="font-mono text-lg font-bold text-white mb-4">Conceptual Model</h4>
+                
+                <div class="bg-neutral-900 rounded p-4 mb-4 font-mono text-sm text-neutral-400">
+                    <pre class="overflow-x-auto">
+[Input Data]
+    ↓
+[Preprocessing / Transformation]
+    ↓
+[Core Model / Analysis]
+    ↓
+[Evaluation / Metrics]
+    ↓
+[Output / Insights]
+                    </pre>
+                </div>
+                
+                <p class="project-note mb-4">
+                    This model outlines how data flows through transformation, analysis, and evaluation stages,
+                    emphasizing structured processing and system-level thinking.
+                </p>
+                
+                <p class="project-note mb-4">
+                    The work involved applying systematic modeling and evaluation techniques to understand tradeoffs and performance.
+                </p>
+                
+                <p class="text-neutral-500 mb-6">
+                    While this work is more research-oriented, it continues to influence how I approach
+                    system design and architectural decisions in practice.
+                </p>
+                
                 <p class="text-neutral-500 mb-6">
                     This work continues to influence how I approach system design and problem solving, 
                     particularly around reliability and fault tolerance.
@@ -507,7 +551,21 @@
     <!-- 5. Engineering Experience Section -->
     <section id="engineering-depth" class="section-padding border-t border-neutral-800">
         <div class="container">
-            <h2 class="text-3xl font-bold mb-12 text-accent">Engineering Experience</h2>
+            <h2 class="text-3xl font-bold mb-8 text-accent">Engineering Experience</h2>
+            
+            <p class="text-neutral-400 mb-6">Areas I've worked with across systems and backend development:</p>
+            
+            <div class="badges">
+                <span class="badge">C/C++</span>
+                <span class="badge">POSIX</span>
+                <span class="badge">Sockets</span>
+                <span class="badge">Multithreading</span>
+                <span class="badge">Linux</span>
+                <span class="badge">Concurrency</span>
+                <span class="badge">Docker</span>
+                <span class="badge">CI/CD</span>
+            </div>
+            
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-card rounded-lg p-6">
                     <h3 class="font-mono text-lg font-bold mb-4 text-white">Systems & Low-Level</h3>
