@@ -190,6 +190,10 @@
             color: #10b981;
         }
         
+        .project.thesis {
+            border-left: 4px solid #525252;
+        }
+        
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             nav .container {
@@ -331,9 +335,105 @@
     <!-- 3. Featured Projects Section -->
     <section id="projects" class="section-padding border-t border-neutral-800">
         <div class="container">
-            <h2 class="text-3xl font-bold mb-12 text-accent">Featured Projects</h2>
+            <h2 class="text-3xl font-bold mb-12 text-accent">Featured Work</h2>
             
-            <!-- Project 1: GenAI Multi-Agent System -->
+            <!-- Project 1: MSc Thesis -->
+            <div class="bg-card rounded-lg p-8 mb-8 transition-all hover-lift project thesis">
+                <span class="tag independent">Research Work</span>
+                
+                <div class="flex items-center gap-3 mb-4 mt-4">
+                    <i class="fas fa-graduation-cap text-accent text-2xl"></i>
+                    <h3 class="text-2xl font-bold text-white">MSc Thesis — Distributed Data Replication & Fault Tolerance Framework</h3>
+                </div>
+                
+                <p class="text-neutral-400 mb-6">
+                    Designed and implemented a fault-tolerant distributed system to improve availability
+                    of a bioinformatics platform (NABTICS), achieving ~70% improvement in system availability.
+                </p>
+                
+                <h4 class="font-mono text-lg font-bold text-white mb-4">Implementation Overview</h4>
+                
+                <ul class="space-y-2 text-neutral-400 mb-6">
+                    <li>• Built a distributed server cluster with modular components</li>
+                    <li>• Implemented neighbor-based replication strategy (NRDT)</li>
+                    <li>• Developed heartbeat-based failure detection using C sockets</li>
+                    <li>• Designed autonomous failover mechanism (IP takeover)</li>
+                    <li>• Integrated MySQL replication for data consistency</li>
+                    <li>• Enabled automatic recovery with minimal downtime</li>
+                </ul>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">C</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">POSIX</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Sockets</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Distributed Systems</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Fault Tolerance</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">MySQL Replication</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Linux</span>
+                    <span class="px-3 py-1 bg-neutral-800 rounded text-sm font-mono text-accent">Networking</span>
+                </div>
+                
+                <h4 class="font-mono text-lg font-bold text-white mb-4">System Architecture</h4>
+                
+                <div class="bg-neutral-900 rounded p-4 mb-4 font-mono text-sm text-neutral-400">
+                    <pre class="overflow-x-auto">
+[Client / Users]
+        ↓
+[Proxy Server]
+        ↓
+[Distributed Server Cluster]
+
+  ├── Node A (Primary)
+  │     ↔ Neighbor Replication
+  │
+  ├── Node B
+  │
+  ├── Node C
+  │
+  └── Node N
+
+        ↓
+
+[Failure Detection Layer]
+- Heartbeat (C sockets)
+- Timeout monitoring
+
+        ↓
+
+[Recovery Layer]
+- Failure confirmation
+- Failover selection
+- IP takeover
+
+        ↓
+
+[Data Layer]
+- MySQL replication
+- Distributed consistency
+                    </pre>
+                </div>
+                
+                <h4 class="font-mono text-lg font-bold text-white mb-4">Key Design Decisions</h4>
+                
+                <ul class="space-y-2 text-neutral-400 mb-6">
+                    <li>• Eliminated single points of failure (SPOF) via replication</li>
+                    <li>• Used neighbor replication (NRDT) for efficient redundancy</li>
+                    <li>• Designed heartbeat + confirmation mechanism for accurate failure detection</li>
+                    <li>• Enabled autonomous recovery to minimize downtime</li>
+                </ul>
+                
+                <p class="project-note mb-6">
+                    This work focuses on system design and fault-tolerant architecture rather than production-scale deployment.
+                </p>
+                
+                <div class="project-links">
+                    <a href="https://drive.google.com/file/d/1M_zkKDE5GjVG6orqz4Mf8WiztSjPDh9y/view?usp=drive_link" target="_blank">
+                        <i class="fas fa-file-pdf mr-1"></i>Read Thesis
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: GenAI Multi-Agent System -->
             <div class="bg-card rounded-lg p-8 mb-8 transition-all hover-lift">
                 <div class="flex items-center gap-3 mb-4">
                     <i class="fas fa-robot text-accent text-2xl"></i>
@@ -485,69 +585,6 @@
                     • RAG repo contains summarization and retrieval logic<br>
                     • IaC repo defines deployment and infrastructure setup
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- MSc Thesis Section -->
-    <section id="thesis" class="section-padding border-t border-neutral-800">
-        <div class="container">
-            <h2 class="text-3xl font-bold mb-8 text-accent">MSc Thesis</h2>
-            
-            <div class="bg-card rounded-lg p-8">
-                <p class="text-lg text-white mb-4">A New Technique for Distributed Data Replication Management <span class="tag independent">Independent (Research)</span></p>
-                
-                <p class="text-neutral-400 mb-4">
-                    This work focused on improving data availability across distributed bioinformatics repositories 
-                    through autonomous failover mechanisms and heartbeat monitoring systems.
-                </p>
-                
-                <ul class="space-y-2 text-neutral-400 mb-6">
-                    <li>• High-availability framework design for distributed systems</li>
-                    <li>• C-based implementation using POSIX threads and sockets</li>
-                    <li>• MySQL replication management with automatic IP failover</li>
-                </ul>
-                
-                <h4 class="font-mono text-lg font-bold text-white mb-4">Conceptual Model</h4>
-                
-                <div class="bg-neutral-900 rounded p-4 mb-4 font-mono text-sm text-neutral-400">
-                    <pre class="overflow-x-auto">
-[Input Data]
-    ↓
-[Preprocessing / Transformation]
-    ↓
-[Core Model / Analysis]
-    ↓
-[Evaluation / Metrics]
-    ↓
-[Output / Insights]
-                    </pre>
-                </div>
-                
-                <p class="project-note mb-4">
-                    This model outlines how data flows through transformation, analysis, and evaluation stages,
-                    emphasizing structured processing and system-level thinking.
-                </p>
-                
-                <p class="project-note mb-4">
-                    The work involved applying systematic modeling and evaluation techniques to understand tradeoffs and performance.
-                </p>
-                
-                <p class="text-neutral-500 mb-6">
-                    While this work is more research-oriented, it continues to influence how I approach
-                    system design and architectural decisions in practice.
-                </p>
-                
-                <p class="text-neutral-500 mb-6">
-                    This work continues to influence how I approach system design and problem solving, 
-                    particularly around reliability and fault tolerance.
-                </p>
-                
-                <div class="project-links">
-                    <a href="#" target="_blank">
-                        <i class="fas fa-file-pdf mr-1"></i>Read Thesis
-                    </a>
-                </div>
             </div>
         </div>
     </section>
