@@ -13,7 +13,6 @@
 ### DevOps
 ![DevOps](devops.png)
 
-### DevOps 2
 ![DevOps 2](devops2.png)
 
 ### High Level
